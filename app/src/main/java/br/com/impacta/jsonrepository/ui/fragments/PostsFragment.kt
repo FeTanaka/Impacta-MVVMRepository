@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.impacta.jsonrepository.databinding.FragmentPostsBinding
 import br.com.impacta.jsonrepository.ui.adapters.PostAdapter
-import br.com.impacta.jsonrepository.viewmodels.PostsViewModel
+import br.com.impacta.jsonrepository.ui.viewmodels.PostsViewModel
 
 
 class PostsFragment : Fragment() {
