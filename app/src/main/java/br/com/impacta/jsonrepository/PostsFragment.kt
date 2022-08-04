@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.impacta.jsonrepository.databinding.FragmentPostsBinding
 
@@ -29,7 +30,10 @@ class PostsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.listaPosts.observe(viewLifecycleOwner) { lista ->
-            binding.postsRecyclerView.adapter = PostAdapter(lista)
+            binding.postsRecyclerView.adapter = PostAdapter(lista) { id ->
+                val action = PostsFragmentDirections.actionPostsFragmentToPostCommentsFragment(id)
+                findNavController().navigate(action)
+            }
             binding.postsRecyclerView.layoutManager = LinearLayoutManager(context)
         }
 

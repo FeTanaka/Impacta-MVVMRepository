@@ -12,4 +12,8 @@ class PostRepository {
     suspend fun getAllPosts(): List<Post> {
         return endpoints.getAllPosts()
     }
+
+    suspend fun getPostById(postId: Int): Post {
+        return endpoints.getPostById(postId)
+    }
 }

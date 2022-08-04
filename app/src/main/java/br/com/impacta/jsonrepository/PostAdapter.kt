@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.impacta.jsonrepository.data.models.Post
 import br.com.impacta.jsonrepository.databinding.PostItemBinding
 
-class PostAdapter(val listaPosts: List<Post>): RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
+class PostAdapter(val listaPosts: List<Post>, val action: (Int) -> Unit): RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
     inner class PostViewHolder(val binding: PostItemBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -17,6 +17,9 @@ class PostAdapter(val listaPosts: List<Post>): RecyclerView.Adapter<PostAdapter.
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         holder.binding.post = listaPosts[position]
+        holder.binding.root.setOnClickListener {
+            action(listaPosts[position].id)
+        }
     }
 
     override fun getItemCount(): Int {
