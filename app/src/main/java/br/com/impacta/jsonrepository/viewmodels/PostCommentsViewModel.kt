@@ -1,4 +1,4 @@
-package br.com.impacta.jsonrepository
+package br.com.impacta.jsonrepository.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -10,6 +10,7 @@ import br.com.impacta.jsonrepository.data.repository.CommentRepository
 import br.com.impacta.jsonrepository.data.repository.PostRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class PostCommentsViewModel: ViewModel() {
 
@@ -24,7 +25,9 @@ class PostCommentsViewModel: ViewModel() {
     fun getData(postId: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             val postGet = postRepository.getPostById(postId)
-            _post.postValue(postGet)
+            withContext(Dispatchers.Main) {
+                _post.value = postGet
+            }
         }
         viewModelScope.launch(Dispatchers.IO) {
             val commentsGet = commentRepository.getPostComments(postId)

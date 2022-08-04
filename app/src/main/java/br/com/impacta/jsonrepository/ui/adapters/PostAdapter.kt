@@ -1,4 +1,4 @@
-package br.com.impacta.jsonrepository
+package br.com.impacta.jsonrepository.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

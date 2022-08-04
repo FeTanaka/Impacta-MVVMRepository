@@ -1,4 +1,4 @@
-package br.com.impacta.jsonrepository
+package br.com.impacta.jsonrepository.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import br.com.impacta.jsonrepository.viewmodels.PostCommentsViewModel
 import br.com.impacta.jsonrepository.databinding.FragmentPostCommentsBinding
+import br.com.impacta.jsonrepository.ui.adapters.CommentAdapter
 
 
 class PostCommentsFragment : Fragment() {

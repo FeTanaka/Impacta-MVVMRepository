@@ -1,4 +1,4 @@
-package br.com.impacta.jsonrepository
+package br.com.impacta.jsonrepository.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.impacta.jsonrepository.databinding.FragmentPostsBinding
+import br.com.impacta.jsonrepository.ui.adapters.PostAdapter
+import br.com.impacta.jsonrepository.viewmodels.PostsViewModel
 
 
 class PostsFragment : Fragment() {

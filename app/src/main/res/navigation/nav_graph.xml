@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="br.com.impacta.jsonrepository.HomeFragment"
+        android:name="br.com.impacta.jsonrepository.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/postsFragment"
-        android:name="br.com.impacta.jsonrepository.PostsFragment"
+        android:name="br.com.impacta.jsonrepository.ui.fragments.PostsFragment"
         android:label="fragment_posts"
         tools:layout="@layout/fragment_posts" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/postCommentsFragment"
-        android:name="br.com.impacta.jsonrepository.PostCommentsFragment"
+        android:name="br.com.impacta.jsonrepository.ui.fragments.PostCommentsFragment"
         android:label="fragment_post_comments"
         tools:layout="@layout/fragment_post_comments" >
         <argument

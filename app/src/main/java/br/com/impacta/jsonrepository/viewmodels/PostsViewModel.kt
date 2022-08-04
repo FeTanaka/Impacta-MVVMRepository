@@ -1,4 +1,4 @@
-package br.com.impacta.jsonrepository
+package br.com.impacta.jsonrepository.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
